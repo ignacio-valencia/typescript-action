@@ -1,19 +1,15 @@
-name: 'The name of your action here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
-
-# Define your inputs here.
+name: 'Compare JSON Files'
+description: 'Compares two JSON files in the repository'
 inputs:
-  milliseconds:
-    description: 'Your input description here'
+  file1:
+    description: 'Path to the first JSON file'
     required: true
-    default: '1000'
-
-# Define your outputs here.
+  file2:
+    description: 'Path to the second JSON file'
+    required: true
 outputs:
-  time:
-    description: 'Your output description here'
-
+  areEqual:
+    description: 'True if the JSON files are equal, false otherwise'
 runs:
   using: node20
   main: dist/index.js
