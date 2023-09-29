@@ -17,7 +17,7 @@ export async function run(): Promise<void> {
     const areEqual: boolean = JSON.stringify(file1Content) === JSON.stringify(file2Content);
 
     core.setOutput('areEqual', areEqual.toString());
-  } catch (error) {
+  } catch (error: Error) {
     core.setFailed(error.message);
   }
 }
