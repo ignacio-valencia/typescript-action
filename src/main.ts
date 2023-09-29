@@ -2,7 +2,11 @@ import * as core from '@actions/core';
 import * as fs from 'fs';
 import * as path from 'path';
 
-async function run(): Promise<void> {
+/**
+ * The main function for the action.
+ * @returns {Promise<void>} Resolves when the action is complete.
+ */
+export async function run(): Promise<void> {
   try {
     const file1Path: string = core.getInput('file1');
     const file2Path: string = core.getInput('file2');
